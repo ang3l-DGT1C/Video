@@ -13,6 +13,12 @@
 		3DA755CC2997FAB8009FF888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA755CA2997FAB8009FF888 /* Main.storyboard */; };
 		3DA755CE2997FAC3009FF888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA755CD2997FAC3009FF888 /* Assets.xcassets */; };
 		3DA755D12997FAC3009FF888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA755CF2997FAC3009FF888 /* LaunchScreen.storyboard */; };
+		3DA755DA2997FAE3009FF888 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA755D92997FAE3009FF888 /* AVFoundation.framework */; };
+		3DA755DC2997FAEC009FF888 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA755DB2997FAEB009FF888 /* AVKit.framework */; };
+		3DA755DE2997FBF7009FF888 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA755DD2997FBF7009FF888 /* PlayerViewController.swift */; };
+		3DA755E02997FC59009FF888 /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3DA755DF2997FC59009FF888 /* cat.wav */; };
+		3DA755E329980B4B009FF888 /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 3DA755E229980B4B009FF888 /* YouTubeiOSPlayerHelper */; };
+		3DA755E52998123F009FF888 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA755E42998123F009FF888 /* VideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		3DA755CD2997FAC3009FF888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DA755D02997FAC3009FF888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DA755D22997FAC3009FF888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DA755D92997FAE3009FF888 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3DA755DB2997FAEB009FF888 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		3DA755DD2997FBF7009FF888 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		3DA755DF2997FC59009FF888 /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
+		3DA755E42998123F009FF888 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA755DC2997FAEC009FF888 /* AVKit.framework in Frameworks */,
+				3DA755DA2997FAE3009FF888 /* AVFoundation.framework in Frameworks */,
+				3DA755E329980B4B009FF888 /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +56,7 @@
 			children = (
 				3DA755C32997FAB8009FF888 /* Video */,
 				3DA755C22997FAB8009FF888 /* Products */,
+				3DA755D82997FAE3009FF888 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +72,26 @@
 			isa = PBXGroup;
 			children = (
 				3DA755C42997FAB8009FF888 /* AppDelegate.swift */,
+				3DA755DF2997FC59009FF888 /* cat.wav */,
 				3DA755C62997FAB8009FF888 /* SceneDelegate.swift */,
 				3DA755C82997FAB8009FF888 /* ViewController.swift */,
 				3DA755CA2997FAB8009FF888 /* Main.storyboard */,
 				3DA755CD2997FAC3009FF888 /* Assets.xcassets */,
 				3DA755CF2997FAC3009FF888 /* LaunchScreen.storyboard */,
 				3DA755D22997FAC3009FF888 /* Info.plist */,
+				3DA755DD2997FBF7009FF888 /* PlayerViewController.swift */,
+				3DA755E42998123F009FF888 /* VideoViewController.swift */,
 			);
 			path = Video;
+			sourceTree = "<group>";
+		};
+		3DA755D82997FAE3009FF888 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DA755DB2997FAEB009FF888 /* AVKit.framework */,
+				3DA755D92997FAE3009FF888 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +110,9 @@
 			dependencies = (
 			);
 			name = Video;
+			packageProductDependencies = (
+				3DA755E229980B4B009FF888 /* YouTubeiOSPlayerHelper */,
+			);
 			productName = Video;
 			productReference = 3DA755C12997FAB8009FF888 /* Video.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 3DA755B82997FAB8009FF888;
+			packageReferences = (
+				3DA755E129980B4B009FF888 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
+			);
 			productRefGroup = 3DA755C22997FAB8009FF888 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +161,7 @@
 				3DA755D12997FAC3009FF888 /* LaunchScreen.storyboard in Resources */,
 				3DA755CE2997FAC3009FF888 /* Assets.xcassets in Resources */,
 				3DA755CC2997FAB8009FF888 /* Main.storyboard in Resources */,
+				3DA755E02997FC59009FF888 /* cat.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DA755C92997FAB8009FF888 /* ViewController.swift in Sources */,
+				3DA755DE2997FBF7009FF888 /* PlayerViewController.swift in Sources */,
 				3DA755C52997FAB8009FF888 /* AppDelegate.swift in Sources */,
+				3DA755E52998123F009FF888 /* VideoViewController.swift in Sources */,
 				3DA755C72997FAB8009FF888 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DA755E129980B4B009FF888 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DA755E229980B4B009FF888 /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DA755E129980B4B009FF888 /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DA755B92997FAB8009FF888 /* Project object */;
 }
